@@ -19,6 +19,13 @@ closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
 
+// モーダルの背景をクリックした時にモーダルを閉じる
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
+
 const scrollBtn = document.getElementById("scrollToTop");
 
 // スクロール時の表示切り替え
