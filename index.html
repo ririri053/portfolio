@@ -68,13 +68,14 @@
 
       <section id="video" class="fade-in-section">
         <h2>プレイ動画</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/BOsI2TDVq6w"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/BOsI2TDVq6w"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
         <p>
           <u>ゲーム概要:</u><br />
           今作はUdemyの動画教材を学習した後に<u>1から作り直した作品</u>です。<br />
@@ -129,16 +130,14 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 yamamoto</p>
+      <p>© 2025 yamamoto</p>
     </footer>
 
     <div id="modal" class="modal hidden">
-      <span id="closeBtn" class="close">&times;</span>
+      <span id="closeBtn" class="close">×</span>
       <img id="modalImg" class="modal-content" />
     </div>
     "
     <script src="script.js"></script>
   </body>
 </html>
-
-
