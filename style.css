@@ -69,48 +69,76 @@ h2 {
   padding-left: 0.5em;
 }
 
-.dl-button {
-  display: inline-block;
-  background-color: #4caf50;
-  color: white;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1em;
+/* 動画のレスポンシブ対応 */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9のアスペクト比を維持 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* slider-wrapperのコンテナ設定 */
 .slider-wrapper {
-  width: 90%; /* 親要素の幅に対して90%の幅を設定 */
-  max-width: 800px; /* 最大幅を800pxに制限 */
-  margin: 0 auto; /* コンテナを中央寄せにする */
-  overflow-x: auto; /* コンテナからはみ出た部分を横スクロール可能にする */
-  white-space: nowrap; /* 画像を折り返さずに1行で表示 */
-  padding: 10px; /* 内側に余白を追加 */
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  display: flex; /* flexboxを適用 */
+  gap: 10px; /* 画像間の隙間 */
+  -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかにする */
 }
 
 /* slider-wrapper内の画像設定 */
 .slider-wrapper img {
-  height: 400px; /* 画像の高さを固定 */
-  width: auto; /* 幅は元の比率を維持して自動調整 */
-  margin-right: 10px; /* 画像の右側に余白を追加して間隔をあける */
-  display: inline-block; /* 画像をインラインブロック要素として扱い、横並びにする */
-  vertical-align: top; /* 画像を上揃えにする */
+  height: 400px;
+  width: auto;
+  flex-shrink: 0; /* 画像が縮まないようにする */
+  cursor: pointer; /* クリック可能であることを示す */
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
+  body {
+    font-size: 16px; /* モバイル向けにベースフォントサイズを調整 */
+  }
+
   .site-header .container {
     flex-direction: column;
     text-align: center;
   }
 
   .site-nav ul {
-    margin-top: 10px;
+    flex-wrap: wrap; /* ナビゲーション項目を折り返す */
+    justify-content: center;
+    gap: 10px;
   }
 
   .site-nav a {
-    margin: 0 10px;
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
+
+  /* ゲーム概要の情報を縦に並べる */
+  #game-info p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .slider-wrapper img {
+    height: 200px; /* モバイル向けに画像高さを小さくする */
   }
 }
 
