@@ -4,6 +4,7 @@
 
 山本莉久のポートフォリオ用Unityゲームプロジェクトです。
 
+🎮 **Play the HTML Site Here** → [https://ririri053.github.io/portfolio/](https://ririri053.github.io/portfolio/)
 ---
 
 ## ゲーム概要
@@ -24,7 +25,6 @@
 - セーブロード機能の実装  
 
 ---
-
 ## ダウンロード
 
 APKファイルのダウンロードはこちらから可能です：  
