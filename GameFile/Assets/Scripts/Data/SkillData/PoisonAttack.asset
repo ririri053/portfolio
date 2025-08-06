@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96486372ebad4b459c387b226999d85, type: 3}
+  m_Name: PoisonAttack
+  m_EditorClassIdentifier: 
+  Type: 4
+  Name: "\u6BD2\u3005\u653B\u6483"
+  Description: "\u6575\u306B\u30C0\u30E1\u30FC\u30B8\u3092\u4E0E\u3048\u30014T\u6BD2\u72B6\u614B\u306B\u3059\u308B"
+  MpCost: 50
+  EffectPrefab: {fileID: 5741969430806916631, guid: 9a1e33973bbe0174ea111e231aec8f0e, type: 3}
